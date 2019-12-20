@@ -17,7 +17,7 @@
 
 **1.2 模型以及实验结果**
 
-### 2. 二分类：判断图片是否有狗
+### 2. 二分类：判断图片是否有猫
 **2.1 实验数据**
 
 |二分类实验|有|无|数据总数|训练验证比例|
@@ -27,12 +27,35 @@
 **2.2 模型以及实验结果**
 
 ### 3. 多组分类：判断图片里猫的品种
-**3.1 实验数据**
+#### 3.1 实验数据
 
-|  |数据总数|训练集数量|验证集数量|训练验证比例|
-|:--:|:--:|:--:|:--:|:--:|
-|多组分类实验|00|00|00|00|
+|<br />|数据总数|训练集数量|验证集数量|训练验证比例|
+|:----------:|:--:|:--:|:--:|:--:|
+|多组分类实验|3507|2811|696|0.2|
 
-**3.2 模型以及实验结果**
+#### 3.2 模型以及实验结果
+
+```python
+    Conv2D(32, 3, padding='same', input_shape=(IMG_HEIGHT, IMG_WIDTH ,3)),
+    Activation('relu'),
+    Conv2D(32, 3),
+    Activation('relu'),
+    MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
+    Dropout(0.25),
+    Conv2D(64, 5, padding='same'),
+    Activation('relu'),
+    Conv2D(64, 5),
+    Activation('relu'),
+    MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
+    Dropout(0.25),
+    Flatten(),
+    Dense(512),
+    Activation('relu'),
+    Dropout(0.5),
+    Dense(classNum),
+    Activation('softmax')
+```
+
+![img](multiclass\sub_cd_0.25dp_150.png)
 
 ### 4. 总结
