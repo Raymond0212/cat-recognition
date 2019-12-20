@@ -15,14 +15,6 @@
   + 其他算法进行对特征分类
 + __目标__: 完成二维分类（有没有猫）
 
-### Log
-
-9/12: 完成爬虫，并运行
-
-10/12: 继续运行爬虫XD，并且初步尝试__猫/狗__分类以及__猫/其他__分类
-
-11/12:
-
 ## Week 2 (HYX+CYY: 16/12-21/12)
 
 + __目标__: 在识别猫的基础上判断猫的品种
@@ -34,4 +26,34 @@
 
 ## Week 4 (CYY: 30/12-4/1)
 
-+ 继续完成转移学习方案，并在替他的数据上测试
++ 继续完成转移学习方案，并在其他的数据上测试
+
+# Schedule
+
+## Week 1 (Yuxuan & Yongyan: 9/12-14/12)
+
+### Plan
+
++ Get familiar with Tensorflow
++ Data Collection
+  + Web scraping
+  + Data with various resolution
+  + With/Without cats
++ Algorithms
+  + CNN for future selection
+  + Use other algorithms for classification
+  + Alternative Solution: Use CNN direcrtly in image classification
++ __Aim__: Complete Binary Classification
+
+## Week 2 (Yuxuan & Yongyan: 16/12-21/12)
+
++ __Aim__: Complete multiclass classification based on the binary classification algorithm
+
+## Week 3 (HYX+CYY: 23/12-28/12)
+
++ Buffer time. Finish unfinished programmes or improve it.
++ Try to apply transfered the trainned model.
+
+## Week 4 (CYY: 30/12-4/1)
+
++ Continue finishing transfered learning and try to apply it on other dataset (e.g. SIFCAR-10)
