@@ -56,6 +56,6 @@
     Activation('softmax')
 ```
 
-![img](multiclass\sub_cd_0.25dp_150.png)
+![img](.\multiclass\sub_cd_0.25dp_150.png)
 
 ### 4. 总结
