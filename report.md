@@ -49,6 +49,12 @@
 
 ![img](./binary/droup_out_0.8_0.8.png)
 
+BN调整学习率：
+
+![img](./binary/lr0.0005.png)
+
+![img](./binary/lr0.002.png)
+
 ### 2. 多组分类：判断图片里猫的品种
 #### 2.1 实验数据
 
