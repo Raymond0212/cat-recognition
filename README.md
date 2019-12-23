@@ -1,5 +1,48 @@
 # 计划日程
 
+cat-recognition</br>
+├─ 3355_130_weights.h5</br>
+├─ [README.md](./readme.md)</br>
+├─ SIFT.ipynb</br>
+├─ binary</br>
+│	├─ .ipynb_checkpoints</br>
+│	├─ Classification (cats & dogs).ipynb</br>
+│	├─ [Dog Detection (BN).ipynb](./binary/Dog&#32;Detection&#32;(BN).ipynb)</br>
+│	├─ [Dog Detection (Dropout) .ipynb](./binary/Dog&#32;Detection&#32;(Dropout)&#32;.ipynb)</br>
+│	├─ [Dog Detection (other kernel size).ipynb](./binary/)</br>
+│	├─ Try_cat_dog.ipynb</br>
+│	├─ binary_model.png</br>
+│	├─ bn.png</br>
+│	├─ droup_out_0.8_0.8.png</br>
+│	├─ lr0.0005.png</br>
+│	├─ lr0.002.png</br>
+│	└─ no_dropout.png</br>
+├─ dataCleansing.ipynb</br>
+├─ [img](./img/)</br>
+│	├─ cat</br>
+│	├─ detection</br>
+│	└─ no_cat</br>
+├─ img_sub</br>
+│	└─ cat</br>
+├─ multiclass</br>
+│	├─ 150_3355kernal.png</br>
+│	├─ 3355_30_weights_1.h5</br>
+│	├─ 3355_60_weights_1.h5</br>
+│	├─ Classification (clothes).ipynb</br>
+│	├─ cat_dataset.png</br>
+│	├─ [cat_others_multi.ipynb](./multiclass/cat_others_multi.ipynb)</br>
+│	├─ cd-0.25dp.png</br>
+│	├─ f_3355_60.30_weights_1.h5</br>
+│	├─ f_3355_60.60_weights_1.h5</br>
+│	├─ f_3355_60.90_weights_1.h5</br>
+│	├─ f_3355_90.png</br>
+│	├─ sub_cd_0.25dp.png</br>
+│	└─ sub_cd_0.25dp_150.png</br>
+├─ [report.md](./report.md)//总结报告</br>
+├─ report_en.md</br>
+├─ [web-scraping.ipynb](./web-scraping.ipynb)</br>
+└─ [动物图像识别与分类.pdf](./动物图像识别与分类.pdf)</br>
+
 ## Week 1 (HYX+CYY: 9/12-14/12)
 
 ### Plan
