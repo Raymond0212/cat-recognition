@@ -9,7 +9,7 @@ cat-recognition</br>
 │	├─ Classification (cats & dogs).ipynb</br>
 │	├─ [Dog Detection (BN).ipynb](./binary/Dog&#32;Detection&#32;(BN).ipynb) //批正则化</br>
 │	├─ [Dog Detection (Dropout) .ipynb](./binary/Dog&#32;Detection&#32;(Dropout)&#32;.ipynb) //尝试不同的Dropout</br>
-│	├─ [Dog Detection (other kernel size).ipynb](./binary/) //二分类， 不同的卷积核</br>
+│	├─ [Dog Detection (other kernel size).ipynb](./binary/Dog&#32;Detection&#32;(other&#32;kernel&#32;size)) //二分类， 不同的卷积核</br>
 │	├─ Try_cat_dog.ipynb</br>
 │	├─ binary_model.png</br>
 │	├─ bn.png</br>

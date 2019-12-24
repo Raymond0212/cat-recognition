@@ -4,6 +4,8 @@
 
 ### Introduction
 
++ This project mainly explored models in the following situation
+
 + 本次项目主要对一下两种模型进行了实验：
   + 二分类模型：判断图片里是否有某种动物，这次项目里对是否有猫和是否有狗分别进行了两组实验
   + 多组分类模型：判断图片里动物的种类，这次项目主要对猫的种类进行了实验
