@@ -2,14 +2,14 @@
 
 cat-recognition</br>
 ├─ 3355_130_weights.h5</br>
-├─ [README.md](./readme.md)</br>
+├─ [README.md](./readme.md) //README文件</br>
 ├─ SIFT.ipynb</br>
 ├─ binary</br>
 │	├─ .ipynb_checkpoints</br>
 │	├─ Classification (cats & dogs).ipynb</br>
-│	├─ [Dog Detection (BN).ipynb](./binary/Dog&#32;Detection&#32;(BN).ipynb)</br>
-│	├─ [Dog Detection (Dropout) .ipynb](./binary/Dog&#32;Detection&#32;(Dropout)&#32;.ipynb)</br>
-│	├─ [Dog Detection (other kernel size).ipynb](./binary/)</br>
+│	├─ [Dog Detection (BN).ipynb] //批正则化(./binary/Dog&#32;Detection&#32;(BN).ipynb)</br>
+│	├─ [Dog Detection (Dropout) .ipynb](./binary/Dog&#32;Detection&#32;(Dropout)&#32;.ipynb) //尝试不同的Dropout</br>
+│	├─ [Dog Detection (other kernel size).ipynb](./binary/) //二分类， 不同的卷积核</br>
 │	├─ Try_cat_dog.ipynb</br>
 │	├─ binary_model.png</br>
 │	├─ bn.png</br>
@@ -18,10 +18,10 @@ cat-recognition</br>
 │	├─ lr0.002.png</br>
 │	└─ no_dropout.png</br>
 ├─ dataCleansing.ipynb</br>
-├─ [img](./img/)</br>
-│	├─ cat</br>
-│	├─ detection</br>
-│	└─ no_cat</br>
+├─ [img](./img/) //数据集</br>
+│	├─ cat //15种猫分类</br>
+│	├─ detection //二分类数据集</br>
+│	└─ no_cat //无猫</br>
 ├─ img_sub</br>
 │	└─ cat</br>
 ├─ multiclass</br>
@@ -30,7 +30,7 @@ cat-recognition</br>
 │	├─ 3355_60_weights_1.h5</br>
 │	├─ Classification (clothes).ipynb</br>
 │	├─ cat_dataset.png</br>
-│	├─ [cat_others_multi.ipynb](./multiclass/cat_others_multi.ipynb)</br>
+│	├─ [cat_others_multi.ipynb](./multiclass/cat_others_multi.ipynb) //多分类</br>
 │	├─ cd-0.25dp.png</br>
 │	├─ f_3355_60.30_weights_1.h5</br>
 │	├─ f_3355_60.60_weights_1.h5</br>
@@ -38,9 +38,9 @@ cat-recognition</br>
 │	├─ f_3355_90.png</br>
 │	├─ sub_cd_0.25dp.png</br>
 │	└─ sub_cd_0.25dp_150.png</br>
-├─ [report.md](./report.md)//总结报告</br>
+├─ [report.md](./report.md) //总结报告</br>
 ├─ report_en.md</br>
-├─ [web-scraping.ipynb](./web-scraping.ipynb)</br>
+├─ [web-scraping.ipynb](./web-scraping.ipynb) //拉取图片的爬虫</br>
 └─ [动物图像识别与分类.pdf](./动物图像识别与分类.pdf)</br>
 
 ## Week 1 (HYX+CYY: 9/12-14/12)
