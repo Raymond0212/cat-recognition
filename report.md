@@ -94,24 +94,24 @@ __结果总结:__
 __模型以及代码:__
 
 ```python
-    Conv2D(32, 3, padding='same', input_shape=(IMG_HEIGHT, IMG_WIDTH ,3)),
-    Activation('relu'),
-    Conv2D(32, 3),
-    Activation('relu'),
-    MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
-    Dropout(0.25),
-    Conv2D(64, 5, padding='same'),
-    Activation('relu'),
-    Conv2D(64, 5),
-    Activation('relu'),
-    MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
-    Dropout(0.25),
-    Flatten(),
-    Dense(512),
-    Activation('relu'),
-    Dropout(0.5),
-    Dense(classNum),
-    Activation('softmax')
+Conv2D(32, 3, padding='same', input_shape=(IMG_HEIGHT, IMG_WIDTH ,3)),
+Activation('relu'),
+Conv2D(32, 3),
+Activation('relu'),
+MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
+Dropout(0.25),
+Conv2D(64, 5, padding='same'),
+Activation('relu'),
+Conv2D(64, 5),
+Activation('relu'),
+MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
+Dropout(0.25),
+Flatten(),
+Dense(512),
+Activation('relu'),
+Dropout(0.5),
+Dense(classNum),
+Activation('softmax')
 ```
 
 __子集__
