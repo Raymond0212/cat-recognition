@@ -7,7 +7,7 @@ cat-recognition</br>
 ├─ binary</br>
 │	├─ .ipynb_checkpoints</br>
 │	├─ Classification (cats & dogs).ipynb</br>
-│	├─ [Dog Detection (BN).ipynb] //批正则化(./binary/Dog&#32;Detection&#32;(BN).ipynb)</br>
+│	├─ [Dog Detection (BN).ipynb](./binary/Dog&#32;Detection&#32;(BN).ipynb) //批正则化</br>
 │	├─ [Dog Detection (Dropout) .ipynb](./binary/Dog&#32;Detection&#32;(Dropout)&#32;.ipynb) //尝试不同的Dropout</br>
 │	├─ [Dog Detection (other kernel size).ipynb](./binary/) //二分类， 不同的卷积核</br>
 │	├─ Try_cat_dog.ipynb</br>
