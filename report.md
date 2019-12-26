@@ -76,34 +76,51 @@ __全集__
 
 #### 2.2 模型以及实验结果
 
+|优化尝试|Accuracy(Train/Validation)|Loss(Train/Validation)|
+|:--------:|:-:|:-:|
+|原始网络|~0.43/~0.36|~1.8/~2.1|
+|3-4层使用5X5的padding|~0.46/~0.40|~1.19/~1.17|
+
+
 __结果总结:__
 
-+ 训练集准确率 > 45%, 损失 < 1.7
-+ 验证集准确率 > 40%, 损失 ≈ 1.9
++ 子集
+  + 训练集准确率 > 45%, 损失 < 1.7
+  + 验证集准确率 > 40%, 损失 ≈ 1.9
++ 全集
+  + 训练集准确率 > 50%, 损失 < 1.6
+  + 验证集准确率 > 45%, 损失 ≈ 1.9
 
 __模型以及代码:__
+
 ```python
-    Conv2D(32, 3, padding='same', input_shape=(IMG_HEIGHT, IMG_WIDTH ,3)),
-    Activation('relu'),
-    Conv2D(32, 3),
-    Activation('relu'),
-    MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
-    Dropout(0.25),
-    Conv2D(64, 5, padding='same'),
-    Activation('relu'),
-    Conv2D(64, 5),
-    Activation('relu'),
-    MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
-    Dropout(0.25),
-    Flatten(),
-    Dense(512),
-    Activation('relu'),
-    Dropout(0.5),
-    Dense(classNum),
-    Activation('softmax')
+Conv2D(32, 3, padding='same', input_shape=(IMG_HEIGHT, IMG_WIDTH ,3)),
+Activation('relu'),
+Conv2D(32, 3),
+Activation('relu'),
+MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
+Dropout(0.25),
+Conv2D(64, 5, padding='same'),
+Activation('relu'),
+Conv2D(64, 5),
+Activation('relu'),
+MaxPooling2D(pool_size=(2, 2), strides=(2, 2)),
+Dropout(0.25),
+Flatten(),
+Dense(512),
+Activation('relu'),
+Dropout(0.5),
+Dense(classNum),
+Activation('softmax')
 ```
 
 __子集__
+
+_原始网络_
+
+![subMultiAccLoss](.\multiclass\sub_cd_0.25dp_150.png)
+
+_改进后_
 
 ![subMultiAccLoss](.\multiclass\150_3355kernal.png)
 
