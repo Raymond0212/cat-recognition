@@ -27,6 +27,7 @@ cat-recognition</br>
 ├─ multiclass</br>
 │	├─ 150_3355kernal.png	//结果统计图</br>
 │	├─ Classification (clothes).ipynb	//tensorflow多分类教程</br>
+│	├─ cnn-lgb.ipynb	//cnn+xgboost/lsm 结果很差，实验性质，但是期望应该是比CNN直接要好，仅作参考</br>
 │	├─ cat_dataset.png	//结果统计图</br>
 │	├─ [cat_others_multi.ipynb](./multiclass/cat_others_multi.ipynb)	//多分类</br>
 │	├─ cd-0.25dp.png	//结果统计图</br>
