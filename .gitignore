@@ -1,4 +1,9 @@
+.vscode/
+*.h5
+.ipynb_checkpoints/
+binary/.ipynb_checkpoints/
+.ipynb_checkpoints/
+multiclass/.ipynb_checkpoints/
 
-binary/.ipynb_checkpoints/Classification (cats & dogs)-checkpoint.ipynb
-binary/.ipynb_checkpoints/Classification (cats & dogs)-checkpoint.ipynb
 .ipynb_checkpoints/SIFT-checkpoint.ipynb
+git 
