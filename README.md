@@ -11,6 +11,7 @@
 
 1. 将要训练的数据集依照文件说明放入```img```下的```cat```, ```no_cat```文件夹。要求对不同种类的猫进行分类并放于```cat```下的不同的文件夹之下
 2. 在当前目录下运行 ```python Cat_Detection_and_Classification.py```
+    +__注意: 训练强制使用需要GPU__  
 3. 获取```*.h5```文件，其中
     + ```Detection.h5```为二分类的权重以及模型文件
     + ```Detection_weights.h5```为二分类的权重文件
