@@ -1,8 +1,9 @@
-.vscode
+.vscode/
 *.h5
 .ipynb_checkpoints
 binary/.ipynb_checkpoints
 multiclass/.ipynb_checkpoints
 Ren2017_Chapter_ANovelImageClassificationMetho.pdf
 .ipynb_checkpoints/SIFT-checkpoint.ipynb
-git 
+git
+multiclass/.ipynb_checkpoints/
