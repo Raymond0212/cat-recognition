@@ -1,8 +1,7 @@
 import os
-import sys
-from tensconorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import load_model
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing import image
 import numpy as np
 
 detection = load_model(".\\Detection.h5")
@@ -45,7 +44,7 @@ detection.evaluate_generator(
     steps = len(test_generator)
 )
 
-PATH = os.path.join(PATH, "//cat")
+PATH = os.path.join(PATH, "cat")
 dirlist = os.listdir(PATH)
 catPath = [os.path.join(PATH, dirname) for dirname in dirlist]
 
