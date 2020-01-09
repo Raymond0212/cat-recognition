@@ -24,11 +24,11 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # In[ ]:
 
 
-split = 0.2
-epochs = 30 #10
+SPLIT = 0.2
+EPOCHS = 30 #10
 IMG_HEIGHT = 116
 IMG_WIDTH = 116
-batch_size = 128
+BATCH_SIZE = 128
 
 
 # In[ ]:
@@ -47,7 +47,7 @@ for a in os.listdir(path_dog):
 for a in os.listdir(path_nodog):
     total_img_num += len(os.listdir(os.path.join(path_nodog, a)))
 
-total_val = total_img_num * split
+total_val = total_img_num * SPLIT
 total_train = total_img_num - total_val
 
 print('total images:', total_img_num)
@@ -65,7 +65,7 @@ data_generator = ImageDataGenerator(
     # shear_range=0.2, # Shearing
     # zoom_range=0.2, # Zooming
     # horizontal_flip=True, # Flipping
-    validation_split=split
+    validation_split=SPLIT
 )
 
 
@@ -75,7 +75,7 @@ data_generator = ImageDataGenerator(
 train_generator = data_generator.flow_from_directory(
     directory=path,
     target_size=(IMG_HEIGHT, IMG_WIDTH),
-    batch_size=batch_size,
+    BATCH_SIZE=BATCH_SIZE,
     class_mode='categorical',
     shuffle=True,
     subset='training') # set as training data
@@ -83,7 +83,7 @@ train_generator = data_generator.flow_from_directory(
 validation_generator = data_generator.flow_from_directory(
     directory=path,
     target_size=(IMG_HEIGHT, IMG_WIDTH),
-    batch_size=batch_size,
+    BATCH_SIZE=BATCH_SIZE,
     class_mode='categorical',
     shuffle=True,
     subset='validation') # set as validation data
@@ -129,10 +129,10 @@ Detction.summary()  # model summary
 
 history = Detction.fit_generator(
     train_generator,
-    steps_per_epoch=total_train // batch_size,
-    epochs=epochs,
+    steps_per_epoch=total_train // BATCH_SIZE,
+    EPOCHS=EPOCHS,
     validation_data=validation_generator,
-    validation_steps=total_val // batch_size
+    validation_steps=total_val // BATCH_SIZE
 )
 
 
@@ -145,7 +145,7 @@ val_acc = history.history['val_acc']
 loss = history.history['loss']
 val_loss = history.history['val_loss']
 
-epochs_range = range(epochs)
+epochs_range = range(EPOCHS)
 
 plt.figure(figsize=(8, 8))
 plt.subplot(1, 2, 1)
@@ -184,16 +184,16 @@ for i in range(len(catPath)):
     print(dirlist[i], ': ', len(os.listdir(catPath[i])))
 print('total cat imgs: ', total_img_num)
 
-# ## Train test split
+# ## Train test SPLIT
 # In[ ]:
-batch_size = 10
-epochs = 60
+BATCH_SIZE = 10
+EPOCHS = 60
 IMG_HEIGHT = 116
 IMG_WIDTH = 116
-split = 0.2
+SPLIT = 0.2
 classNum = len(dirlist)
-total_val = total_img_num * split
-total_train = total_img_num * (1 - split)
+total_val = total_img_num * SPLIT
+total_train = total_img_num * (1 - SPLIT)
 
 
 # In[ ]:
@@ -206,7 +206,7 @@ train_datagen = ImageDataGenerator(
     shear_range=0.2, # Shearing
     zoom_range=0.2, # Zooming
     horizontal_flip=True, # Flipping
-    validation_split=split
+    validation_split=SPLIT
 )
 
 # In[ ]:
@@ -214,7 +214,7 @@ train_datagen = ImageDataGenerator(
 train_generator = train_datagen.flow_from_directory(
     directory=path,
     target_size=(IMG_HEIGHT, IMG_WIDTH),
-    batch_size=batch_size,
+    BATCH_SIZE=BATCH_SIZE,
     class_mode='categorical',
     shuffle=True,
     subset='training'
@@ -223,7 +223,7 @@ train_generator = train_datagen.flow_from_directory(
 validation_generator = train_datagen.flow_from_directory(
     directory=path,
     target_size=(IMG_HEIGHT, IMG_WIDTH),
-    batch_size=batch_size,
+    BATCH_SIZE=BATCH_SIZE,
     class_mode='categorical',
     shuffle=True,
     subset='validation'
@@ -275,10 +275,10 @@ model.summary()
 with tf.device('/gpu:0'):
     history = model.fit_generator(
         train_generator,
-        steps_per_epoch = total_train // batch_size,
-        epochs = epochs,
+        steps_per_epoch = total_train // BATCH_SIZE,
+        EPOCHS = EPOCHS,
         validation_data = validation_generator,
-        validation_steps = total_val // batch_size     
+        validation_steps = total_val // BATCH_SIZE     
     )
 
 
