@@ -25,16 +25,16 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 split = 0.2
-epochs = 25 #10
-IMG_HEIGHT = 112
-IMG_WIDTH = 112
+epochs = 30 #10
+IMG_HEIGHT = 116
+IMG_WIDTH = 116
 batch_size = 128
 
 
 # In[ ]:
 
 
-path = ".\\img"
+path = ".\\img_sub"
 path_dog = os.path.join(path, 'cat')
 path_nodog = os.path.join(path, 'no_cat')
 class_names = ['cat', 'no_cat']
@@ -76,7 +76,7 @@ train_generator = data_generator.flow_from_directory(
     directory=path,
     target_size=(IMG_HEIGHT, IMG_WIDTH),
     batch_size=batch_size,
-    class_mode='binary',
+    class_mode='categorical',
     shuffle=True,
     subset='training') # set as training data
 
@@ -84,11 +84,11 @@ validation_generator = data_generator.flow_from_directory(
     directory=path,
     target_size=(IMG_HEIGHT, IMG_WIDTH),
     batch_size=batch_size,
-    class_mode='binary',
+    class_mode='categorical',
     shuffle=True,
     subset='validation') # set as validation data
 
-
+print(train_generator.class_indices)
 # In[ ]:
 
 
@@ -99,11 +99,11 @@ Detction = Sequential([
     MaxPooling2D(),
     Conv2D(64, 3, padding='same', activation='relu'),
     MaxPooling2D(),
-    Dropout(0.8),
+    Dropout(0.5),
     Flatten(),
     Dense(512, activation='relu'),
-    Dropout(0.8),
-    Dense(1, activation='sigmoid')
+    Dropout(0.5),
+    Dense(2, activation='softmax')
 ])
 
 
@@ -118,7 +118,7 @@ rms = RMSprop(learning_rate=0.0001, decay=1e-6)
 
 
 Detction.compile(optimizer= sgd,
-              loss='binary_crossentropy',
+              loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 Detction.summary()  # model summary
@@ -167,7 +167,7 @@ plt.show()
 
 
 Detction.save('Detection.h5')
-Detction.sabve_weights('Detection_weights.h5')
+Detction.save_weights('Detection_weights.h5')
 
 
 # In[ ]:
@@ -229,7 +229,7 @@ validation_generator = train_datagen.flow_from_directory(
     subset='validation'
 ) # set as validation data
 
-
+print(train_generator.class_indices)
 # In[ ]:
 
 
